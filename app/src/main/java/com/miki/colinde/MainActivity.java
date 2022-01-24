@@ -1,10 +1,8 @@
 package com.miki.colinde;
 
-import static com.miki.colinde.R.*;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.PopupMenu;
+import static com.miki.colinde.R.id;
+import static com.miki.colinde.R.layout;
+import static com.miki.colinde.R.menu;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -14,10 +12,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 
 import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu newMenu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(menu.menu, newMenu);
+        inflater.inflate(menu.main_menu, newMenu);
         return true;
     }
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case id.bookmarks:
-                Toast.makeText(this, "Bookmarks", Toast.LENGTH_SHORT).show();
+                openBookMarks();
                 break;
             case id.settings:
                 openSettings(id.settings);
@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void openBookMarks() {
     }
 
     private void setCheckBox(String pref, MenuItem item) {
@@ -97,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
             }
-
             keepPopUpAlive(item);
             return false;
         });
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         pdfView = findViewById(id.pdfView);
         pdfView.fromAsset("book.pdf")
                 .swipeHorizontal(horizontal_scroll)
-                .scrollHandle(new DefaultScrollHandle(this))
+                .scrollHandle(new MyScrollHandler(this))
                 .fitEachPage(true) // fit each page to the view, else smaller pages are scaled relative to largest page.
                 .pageSnap(page_by_page) // snap pages to screen boundaries
                 .pageFling(page_by_page) // make a fling change only a single page like ViewPager

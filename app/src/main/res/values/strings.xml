@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Колядник</string>
+    <string name="jump_to_page_hint">Введіть номер сторінки</string>
+    <string name="book_marks_name">Закладки</string>
+    <string name="settings_name">Налаштування</string>
+    <string name="horizontal_scroll_name">Горизонтальна прокрутка</string>
+    <string name="page_by_page_name">Сторінка за сторінкою</string>
+    <string name="page_by_page_title">Перейдіть на сторінку</string>
+    <string name="button_ok">ОК</string>
+    <string name="button_cancel">Скасувати</string>
+    <string name="page_number_error">Введіть дійсний номер</string>
 </resources>

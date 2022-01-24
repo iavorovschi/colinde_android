@@ -4,18 +4,13 @@
 
     <item
         android:id="@+id/bookmarks"
-        android:title="Закладки"
         android:icon="@drawable/ic_bookmarks"
-        app:showAsAction="always"
-        />
+        android:title="@string/book_marks_name"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/settings"
-        android:title="Налаштування"
         android:icon="@drawable/ic_dots_vert"
-        app:showAsAction="always"
-        />
-
-
-
+        android:title="@string/settings_name"
+        app:showAsAction="always" />
 </menu>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/scroll"
-        android:title="Горизонтальна прокрутка"
-        android:checkable="true"/>
+        android:checkable="true"
+        android:title="@string/horizontal_scroll_name" />
 
     <item
         android:id="@+id/page_by_page"
-        android:title="Сторінка за сторінкою "
-        android:checkable="true"/>
+        android:checkable="true"
+        android:title="@string/page_by_page_name" />
 </menu>
