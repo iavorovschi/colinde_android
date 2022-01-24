@@ -9,4 +9,10 @@
     <string name="button_ok">ОК</string>
     <string name="button_cancel">Скасувати</string>
     <string name="page_number_error">Введіть дійсний номер</string>
+    <string name="content_name">Зміст</string>
+    <string name="literal_content_name">Алфавітний покажчик колядок</string>
+    <string name="old_carols_name">Старосвітські колядки</string>
+    <string name="viflaim_name">Вифлеємська п\'єса</string>
+    <string name="songs_name">Перед-і по празничні пісні Рождества Христового</string>
+    <string name="musical_notes_name">Нотний матеріал</string>
 </resources>

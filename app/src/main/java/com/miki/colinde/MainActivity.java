@@ -5,15 +5,19 @@ import static com.miki.colinde.R.layout;
 import static com.miki.colinde.R.menu;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 
@@ -64,6 +68,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openBookMarks() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View dialogView = inflater.inflate(layout.dialog_book_marks, null);
+        dialogBuilder.setView(dialogView);
+
+        TextView content = dialogView.findViewById(id.content);
+        TextView literateContent = dialogView.findViewById(id.literate_content);
+        TextView oldCarols = dialogView.findViewById(id.old_carols);
+        TextView viflaim = dialogView.findViewById(id.viflaim);
+        TextView songs = dialogView.findViewById(id.church_songs);
+        TextView notes = dialogView.findViewById(id.musical_notes);
+
+        dialogBuilder.setTitle(getResources().getString(R.string.book_marks_name));
+        dialogBuilder.setNegativeButton(getResources().getString(R.string.button_cancel), (dialog, id) -> dialog.cancel());
+        Dialog dialog = dialogBuilder.create();
+
+        content.setOnClickListener(value -> {
+            pdfView.jumpTo(413);
+            dialog.dismiss();
+        });
+        literateContent.setOnClickListener(value -> {
+            pdfView.jumpTo(404);
+            dialog.dismiss();
+        });
+        oldCarols.setOnClickListener(value -> {
+            pdfView.jumpTo(317);
+            dialog.dismiss();
+        });
+        viflaim.setOnClickListener(value -> {
+            pdfView.jumpTo(338);
+            dialog.dismiss();
+        });
+        content.setOnClickListener(value -> {
+            pdfView.jumpTo(413);
+            dialog.dismiss();
+        });
+        songs.setOnClickListener(value -> {
+            pdfView.jumpTo(347);
+            dialog.dismiss();
+        });
+        notes.setOnClickListener(value -> {
+            pdfView.jumpTo(359);
+            dialog.dismiss();
+        });
+        dialog.show();
     }
 
     private void setCheckBox(String pref, MenuItem item) {

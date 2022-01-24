@@ -1,17 +1,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/page_menu"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_marks_layout"
     android:layout_width="350dp"
     android:layout_height="500dp"
     android:layout_gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:focusable="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/content_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
+            android:id="@+id/literate_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/literal_content_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
+            android:id="@+id/old_carols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/old_carols_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
+            android:id="@+id/viflaim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/viflaim_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
+            android:id="@+id/church_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/songs_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
+            android:id="@+id/musical_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/musical_notes_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+    </LinearLayout>
+
 </LinearLayout>
