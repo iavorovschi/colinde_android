@@ -4,7 +4,7 @@
     android:id="@+id/appBar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/black"
+    android:background="@color/grey"
     android:elevation="4dp"
     app:title="@string/app_name"
     app:titleCentered="true" />

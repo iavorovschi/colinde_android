@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.appcompat.widget.Toolbar;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
@@ -33,12 +34,17 @@ public class MainActivity extends AppCompatActivity {
 
     private PDFView pdfView;
     private SharedPreferences myPref;
+    private MyScrollHandler myScrollHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
-        setSupportActionBar(findViewById(id.appBar));
+        Toolbar toolbar = findViewById(id.appBar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(v -> openBookMarks());
+        toolbar.setNavigationIcon(R.drawable.ic_bookmarks);
+        toolbar.setNavigationContentDescription(R.string.book_marks_name);
         myPref = getSharedPreferences(PRIVATE_PREF, MODE_PRIVATE);
         initPdf();
     }
@@ -54,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case id.bookmarks:
-                openBookMarks();
+            case id.search:
+                myScrollHandler.onCreateDialog();
                 break;
             case id.settings:
                 openSettings(id.settings);
@@ -77,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         TextView literateContent = dialogView.findViewById(id.literate_content);
         TextView oldCarols = dialogView.findViewById(id.old_carols);
         TextView viflaim = dialogView.findViewById(id.viflaim);
+        TextView greetings = dialogView.findViewById(id.greetings);
         TextView songs = dialogView.findViewById(id.church_songs);
         TextView notes = dialogView.findViewById(id.musical_notes);
 
@@ -94,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
         });
         oldCarols.setOnClickListener(value -> {
             pdfView.jumpTo(317);
+            dialog.dismiss();
+        });
+        greetings.setOnClickListener(value -> {
+            pdfView.jumpTo(334);
             dialog.dismiss();
         });
         viflaim.setOnClickListener(value -> {
@@ -172,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initPdf() {
+        myScrollHandler = new MyScrollHandler(this);
         ProgressBar progressBar = findViewById(R.id.loadingBar);
         progressBar.setVisibility(View.VISIBLE);
         boolean horizontal_scroll = myPref.getBoolean(PREF_SCROLL_DIRECTION, true);
@@ -179,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         pdfView = findViewById(id.pdfView);
         pdfView.fromAsset("book.pdf")
                 .swipeHorizontal(horizontal_scroll)
-                .scrollHandle(new MyScrollHandler(this))
+                .scrollHandle(myScrollHandler)
                 .fitEachPage(true) // fit each page to the view, else smaller pages are scaled relative to largest page.
                 .pageSnap(page_by_page) // snap pages to screen boundaries
                 .pageFling(page_by_page) // make a fling change only a single page like ViewPager

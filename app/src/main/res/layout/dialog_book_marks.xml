@@ -49,6 +49,17 @@
             app:drawableEndCompat="@drawable/ic_forward_arrow" />
 
         <TextView
+            android:id="@+id/greetings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/greetings_name"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+        <TextView
             android:id="@+id/viflaim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -69,7 +69,7 @@ public class MyScrollHandler extends RelativeLayout implements ScrollHandle {
 
         }
         assert background != null;
-        background.setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(Color.BLACK, BlendModeCompat.SRC_ATOP));
+        background.setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(Color.rgb(28,28,28), BlendModeCompat.SRC_ATOP));
         setBackground(background);
 
         LayoutParams lp = new LayoutParams(Util.getDP(context, width), Util.getDP(context, height));
