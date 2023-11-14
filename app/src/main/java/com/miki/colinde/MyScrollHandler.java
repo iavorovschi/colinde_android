@@ -60,12 +60,12 @@ public class MyScrollHandler extends RelativeLayout implements ScrollHandle {
             width = HANDLE_LONG;
             height = HANDLE_SHORT;
             align = ALIGN_PARENT_RIGHT;
-            background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_right);
+            background = ContextCompat.getDrawable(context, com.github.barteksc.pdfviewer.R.drawable.default_scroll_handle_right);
         } else {
             width = HANDLE_SHORT;
             height = HANDLE_LONG;
             align = ALIGN_PARENT_BOTTOM;
-            background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_bottom);
+            background = ContextCompat.getDrawable(context, com.github.barteksc.pdfviewer.R.drawable.default_scroll_handle_bottom);
 
         }
         assert background != null;

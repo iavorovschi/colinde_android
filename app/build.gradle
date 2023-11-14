@@ -11,17 +11,17 @@ android {
             keyPassword 'mihaita18'
         }
     }
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.miki.colinde"
         minSdk 21
-        targetSdk 33
-        versionCode 10
-        versionName '1.10'
+        targetSdk 34
+        versionCode 11
+        versionName '1.11'
 
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
     }
 
     buildTypes {
@@ -37,18 +37,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 33
-    buildToolsVersion '32.0.0'
-    ndkVersion '23.1.7779620'
+    compileSdk 34
+    ndkVersion '26.1.10909125'
     namespace 'com.miki.colinde'
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.github.mhiew:android-pdf-viewer:3.2.0-beta.2'
 }
