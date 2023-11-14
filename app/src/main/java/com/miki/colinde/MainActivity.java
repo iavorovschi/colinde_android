@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(findViewById(R.id.loadingBar).getVisibility() == View.VISIBLE) {
+            return super.onOptionsItemSelected(item);
+        }
         switch (item.getItemId()) {
             case id.search:
                 myScrollHandler.onCreateDialog();
@@ -74,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openBookMarks() {
+        if(findViewById(R.id.loadingBar).getVisibility() == View.VISIBLE) {
+            return;
+        }
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = LayoutInflater.from(this);
         View dialogView = inflater.inflate(layout.dialog_book_marks, null);

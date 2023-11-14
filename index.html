@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carte de colinde</title>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div id="adobe-dc-view"></div>
+	<script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+			var adobeDCView = new AdobeDC.View({clientId: "d46f3ec82aa84469b3c587ce6b110b3c", divId: "adobe-dc-view"});
+			adobeDCView.previewFile({
+				content:{location: {url: "carte.pdf"}},
+				metaData:{fileName: "Carte de colinde.pdf"}
+			}, {showAnnotationTools: false, showDownloadPDF: false, showPrintPDF: false, enableSearchAPIs: false, showThumbnails: false});
+		});
+	</script>
+  </body>
+</html>
