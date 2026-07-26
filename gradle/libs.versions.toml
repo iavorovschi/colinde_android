@@ -1,0 +1,24 @@
+[versions]
+# Build tools / language
+agp = "9.3.1"
+kotlin = "2.4.10"
+
+# AndroidX
+activityCompose = "1.13.0"
+
+# Compose
+composeBom = "2026.06.01"
+
+[libraries]
+# AndroidX
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+
+# Compose UI
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

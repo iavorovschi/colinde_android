@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Carte de colinde</string>
+    <string name="jump_to_page_hint">Introduceți numărul paginii</string>
+    <string name="book_marks_name">Semne de carte</string>
+    <string name="settings_name">Setări</string>
+    <string name="horizontal_scroll_name">Derulare orizontală</string>
+    <string name="page_by_page_name">Pagină cu pagină</string>
+    <string name="jump_to_page_title">Mergi la pagină</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Anulează</string>
+    <string name="page_number_error">Introduceți un număr de pagină valid</string>
+    <string name="content_name">Cuprins</string>
+    <string name="literal_content_name">Index alfabetic al colindelor</string>
+    <string name="old_carols_name">Colinde tradiționale</string>
+    <string name="viflaim_name">Piesa Nașterii din Betleem</string>
+    <string name="songs_name">Cântece dinainte și de după praznicul Nașterii Domnului</string>
+    <string name="musical_notes_name">Partituri </string>
+    <string name="jump_to_page_name">Mergi la pagina</string>
+    <string name="greetings_name">Urări și binecuvântări</string>
+</resources>

@@ -5,7 +5,7 @@
     <string name="settings_name">Налаштування</string>
     <string name="horizontal_scroll_name">Горизонтальна прокрутка</string>
     <string name="page_by_page_name">Сторінка за сторінкою</string>
-    <string name="page_by_page_title">Перейдіть на сторінку</string>
+    <string name="jump_to_page_title">Перейдіть на сторінку</string>
     <string name="button_ok">ОК</string>
     <string name="button_cancel">Скасувати</string>
     <string name="page_number_error">Введіть дійсний номер</string>
@@ -15,6 +15,6 @@
     <string name="viflaim_name">Вифлеємська п\'єса</string>
     <string name="songs_name">Перед-і по празничні пісні Рождества Христового</string>
     <string name="musical_notes_name">Нотний матеріал</string>
-    <string name="search_name">Пошук</string>
+    <string name="jump_to_page_name">Перейти на сторінку</string>
     <string name="greetings_name">Вінчування</string>
 </resources>
