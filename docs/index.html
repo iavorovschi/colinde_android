@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  >
+  <title>Carte de colinde</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe
+    src="./pdfjs/web/viewer.html#zoom=page-fit"
+    title="Carte de colinde"
+    allowfullscreen
+  ></iframe>
+  <script>
+    const viewer = document.querySelector("iframe");
+    const preventBrowserZoom = event => event.preventDefault();
+    const gestureEvents = ["gesturestart", "gesturechange"];
+
+    for (const eventName of gestureEvents) {
+      document.addEventListener(eventName, preventBrowserZoom, { passive: false });
+    }
+
+    viewer.addEventListener("load", () => {
+      for (const eventName of gestureEvents) {
+        viewer.contentWindow.addEventListener(eventName, preventBrowserZoom, { passive: false });
+      }
+    });
+  </script>
+</body>
+</html>

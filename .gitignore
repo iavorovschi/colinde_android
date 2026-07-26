@@ -7,6 +7,8 @@
 .gradle-user/
 .kotlin/
 **/build/
+!docs/pdfjs/build/
+!docs/pdfjs/build/**
 
 # Local configuration
 local.properties
