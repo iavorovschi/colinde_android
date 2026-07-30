@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Carte de colinde</string>
     <string name="jump_to_page_hint">Introduceți numărul paginii</string>
     <string name="book_marks_name">Semne de carte</string>
     <string name="settings_name">Setări</string>

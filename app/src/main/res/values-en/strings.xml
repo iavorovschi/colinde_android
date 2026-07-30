@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Carol Book</string>
     <string name="jump_to_page_hint">Enter a page number</string>
     <string name="book_marks_name">Bookmarks</string>
     <string name="settings_name">Settings</string>
