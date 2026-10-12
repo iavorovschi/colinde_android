@@ -1,13 +1,13 @@
 [versions]
 # Build tools / language
-agp = "9.3.1"
-kotlin = "2.4.10"
+agp = "9.4.1"
+kotlin = "2.4.21"
 
 # AndroidX
 activityCompose = "1.13.0"
 
 # Compose
-composeBom = "2026.06.01"
+composeBom = "2026.09.00"
 
 [libraries]
 # AndroidX
